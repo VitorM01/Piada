@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f5f5f5;
+    --accent-color: #e94b3c;
+    --text-color: #ffffff;
+    --background-gradient: linear-gradient(135deg, #1e1e3f 0%, #2d1b69 50%, #0f0f23 100%);
+    --star-color: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background-gradient);
+    background-attachment: fixed;
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(1px 1px at 10% 20%, var(--star-color), transparent),
+        radial-gradient(1px 1px at 30% 40%, var(--star-color), transparent),
+        radial-gradient(1px 1px at 50% 60%, var(--star-color), transparent),
+        radial-gradient(1px 1px at 70% 80%, var(--star-color), transparent),
+        radial-gradient(1px 1px at 90% 10%, var(--star-color), transparent),
+        radial-gradient(1px 1px at 20% 70%, var(--star-color), transparent),
+        radial-gradient(1px 1px at 40% 90%, var(--star-color), transparent),
+        radial-gradient(1px 1px at 60% 30%, var(--star-color), transparent),
+        radial-gradient(1px 1px at 80% 50%, var(--star-color), transparent),
+        radial-gradient(1px 1px at 15% 85%, var(--star-color), transparent),
+        radial-gradient(1px 1px at 35% 15%, var(--star-color), transparent),
+        radial-gradient(1px 1px at 55% 45%, var(--star-color), transparent),
+        radial-gradient(1px 1px at 75% 65%, var(--star-color), transparent),
+        radial-gradient(1px 1px at 95% 25%, var(--star-color), transparent),
+        radial-gradient(1px 1px at 5% 55%, var(--star-color), transparent);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+    animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image, .wiki-link, .clean-image, .video-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.clean-image {
+    flex-direction: column;
+}
+
+.wiki-link {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.video-link {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    p3 {
+        font-size: 1.5rem;
+    }
+    p5 {
+        font-size: 1.2rem;
+    }
+    img {
+        width: 80%;
+    }
+}
