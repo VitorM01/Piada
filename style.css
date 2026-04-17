@@ -162,9 +162,12 @@ header {
     text-align: left;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.hero-image, .wiki-link, .clean-image, .video-link {
+.hero-image, .wiki-link, .clean-image, .video-link, .friend-message {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -199,9 +202,13 @@ header {
     font-weight: 500;
 }
 
-.video-link {
-    font-size: 1.25rem;
+.friend-message p {
+    font-size: 1.5rem;
     font-weight: 400;
+    color: var(--secondary-color);
+    text-align: left;
+    margin: 0;
+    line-height: 1.4;
 }
 
 .hero-image img,
