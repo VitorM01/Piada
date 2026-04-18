@@ -18,7 +18,7 @@ function changeTitle() {
 
     setTimeout(() => {
         horseneigh.currentTime = 0;
-        horseneigh.volume = 10.0;
+        horseneigh.volume = 1.0;
         horseneigh.play();
     }, 4000);
 }
